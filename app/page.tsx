@@ -1,111 +1,116 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-hidden font-sans">
+    <div className="min-h-screen bg-[#050505] text-white overflow-hidden font-sans scroll-smooth">
 
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
 
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#050505,#070707,#050505)]" />
 
-        {/* GLOW */}
         <div className="absolute top-[-200px] left-1/3 w-[700px] h-[700px] bg-[#b08d57]/10 blur-[180px] animate-pulse" />
 
         <div className="absolute bottom-[-300px] right-0 w-[600px] h-[600px] bg-[#b08d57]/5 blur-[180px]" />
 
-        {/* GRID */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.3)_1px,transparent_1px)] bg-[size:80px_80px]" />
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.2)_1px,transparent_1px)] bg-[size:80px_80px]" />
 
       </div>
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
+<nav className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-2xl">
 
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-4 py-4">
 
-          {/* LEFT */}
-          <div className="flex items-center gap-5">
+    {/* MOBILE + DESKTOP CONTAINER */}
+    <div className="flex items-center justify-between gap-4">
 
-            <img
-              src="/logo.png"
-              alt="Quiet Heures"
-              className="w-24 h-24 object-contain hover:rotate-3 transition-transform duration-500"
-            />
+      {/* LEFT */}
+      <div className="flex items-center gap-3 min-w-0">
 
-            <div>
+        <img
+          src="/logo.png"
+          alt="Quiet Heures"
+          className="w-12 h-12 md:w-20 md:h-20 object-contain shrink-0 transition-all duration-500 hover:scale-105"
+        />
 
-              <h1 className="text-xl md:text-2xl tracking-[0.45em] uppercase font-light">
-                Quiet Heures
-              </h1>
+        <div className="min-w-0">
 
-              <p className="text-xs tracking-[0.3em] uppercase text-[#b08d57]/70 mt-1">
-                Emotional Sanctuary
-              </p>
+          <h1 className="text-[11px] sm:text-sm md:text-2xl tracking-[0.18em] md:tracking-[0.4em] uppercase font-light leading-none whitespace-nowrap">
+            Quiet Heures
+          </h1>
 
-            </div>
-
-          </div>
-
-          {/* NAV */}
-          <div className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-[0.2em] text-white/50">
-
-            <a href="#vision" className="hover:text-[#b08d57] transition-colors">
-              Vision
-            </a>
-
-            <a href="#spaces" className="hover:text-[#b08d57] transition-colors">
-              Spaces
-            </a>
-
-            <a href="#waitlist" className="hover:text-[#b08d57] transition-colors">
-              Waitlist
-            </a>
-
-          </div>
-
-          {/* RIGHT */}
-          <div className="flex items-center gap-5">
-
-            <a
-              href="https://www.instagram.com/quietheures/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/40 hover:text-[#b08d57] transition-colors"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="https://www.tiktok.com/@quietheures"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/40 hover:text-[#b08d57] transition-colors"
-            >
-              TikTok
-            </a>
-
-            <a
-              href="#waitlist"
-              className="border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all px-6 py-3 rounded-md uppercase tracking-[0.2em] text-sm"
-            >
-              Join Waitlist
-            </a>
-
-          </div>
+          <p className="text-[8px] md:text-xs tracking-[0.18em] md:tracking-[0.25em] uppercase text-[#b08d57]/70 mt-2">
+            Emotional Sanctuary
+          </p>
 
         </div>
 
-      </nav>
+      </div>
+
+      {/* RIGHT */}
+      <div className="flex items-center">
+
+        <a
+          href="#waitlist"
+          className="border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all duration-300 px-3 md:px-5 py-2 rounded-md uppercase tracking-[0.12em] text-[9px] md:text-sm whitespace-nowrap"
+        >
+          Join
+        </a>
+
+      </div>
+
+    </div>
+
+    {/* DESKTOP LINKS */}
+    <div className="hidden md:flex items-center justify-end gap-6 pt-4 text-sm text-white/40">
+
+      <a
+        href="https://www.instagram.com/quietheures/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-[#b08d57] transition-colors"
+      >
+        Instagram
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@quietheures"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-[#b08d57] transition-colors"
+      >
+        TikTok
+      </a>
+
+      <a
+        href="#vision"
+        className="hover:text-[#b08d57] transition-colors"
+      >
+        Vision
+      </a>
+
+      <a
+        href="#spaces"
+        className="hover:text-[#b08d57] transition-colors"
+      >
+        Spaces
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
+
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
 
-        <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-20 items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-14 md:py-24 grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
 
           {/* LEFT */}
           <div className="space-y-10">
 
-            {/* TAG */}
-            <div className="inline-flex items-center gap-3 border border-[#b08d57]/20 bg-[#b08d57]/5 px-5 py-3 rounded-md text-sm uppercase tracking-[0.25em] text-[#b08d57] backdrop-blur-xl">
+            <div className="inline-flex items-center gap-3 border border-[#b08d57]/20 bg-[#b08d57]/5 px-4 md:px-5 py-3 rounded-md text-xs md:text-sm uppercase tracking-[0.25em] text-[#b08d57] backdrop-blur-xl hover:scale-[1.02] transition-all duration-500">
 
               <div className="w-2 h-2 bg-[#b08d57] animate-pulse" />
 
@@ -113,10 +118,9 @@ export default function Home() {
 
             </div>
 
-            {/* HEADLINE */}
             <div className="space-y-8">
 
-              <h1 className="text-6xl md:text-8xl leading-[0.9] font-light tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-8xl leading-[0.95] font-light tracking-tight">
 
                 Connect.
 
@@ -130,11 +134,11 @@ export default function Home() {
 
               </h1>
 
-              <p className="uppercase tracking-[0.25em] text-xs text-white/40">
+              <p className="uppercase tracking-[0.2em] text-[10px] md:text-xs text-white/40">
                 Hospitality • Wellness • Culture • Community
               </p>
 
-              <p className="text-xl text-white/55 leading-relaxed max-w-2xl">
+              <p className="text-base md:text-xl text-white/55 leading-relaxed max-w-2xl">
 
                 Quiet Heures is a next-generation members sanctuary designed
                 for emotional recovery, creativity, wellness, deep rest,
@@ -169,19 +173,19 @@ export default function Home() {
                 name="email"
                 required
                 placeholder="Enter your email"
-                className="w-full bg-black/40 border border-white/10 px-7 py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-lg"
+                className="w-full bg-black/40 border border-white/10 px-5 md:px-7 py-4 md:py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-base md:text-lg transition-all duration-300 focus:scale-[1.01]"
               />
 
               <textarea
                 name="message"
                 rows={4}
                 placeholder="Why would a space like Quiet Heures matter to you?"
-                className="w-full bg-black/40 border border-white/10 px-7 py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-lg resize-none"
+                className="w-full bg-black/40 border border-white/10 px-5 md:px-7 py-4 md:py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-base md:text-lg resize-none transition-all duration-300 focus:scale-[1.01]"
               />
 
               <button
                 type="submit"
-                className="w-full border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all px-8 py-5 rounded-md text-white uppercase tracking-[0.15em]"
+                className="w-full border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all duration-500 px-8 py-4 md:py-5 rounded-md text-white uppercase tracking-[0.15em] hover:-translate-y-[2px]"
               >
                 Join Waitlist
               </button>
@@ -198,22 +202,22 @@ export default function Home() {
               <img
                 src="/vision-exterior.jpg"
                 alt="Quiet Heures"
-                className="w-full h-[720px] object-cover transition-transform duration-[4000ms] group-hover:scale-105"
+                className="w-full h-[420px] md:h-[720px] object-cover transition-transform duration-[4000ms] group-hover:scale-105 group-hover:rotate-[0.3deg]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
 
-              <div className="absolute bottom-8 left-8 right-8 border border-white/10 bg-black/40 backdrop-blur-xl p-8 rounded-lg">
+              <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 border border-white/10 bg-black/40 backdrop-blur-xl p-4 md:p-8 rounded-lg transition-all duration-500 group-hover:translate-y-[-4px]">
 
-                <p className="uppercase tracking-[0.3em] text-xs text-[#b08d57] mb-4">
+                <p className="uppercase tracking-[0.3em] text-[10px] md:text-xs text-[#b08d57] mb-4">
                   Architectural Vision
                 </p>
 
-                <h3 className="text-3xl font-light mb-4">
+                <h3 className="text-2xl md:text-3xl font-light mb-4">
                   A city within the city.
                 </h3>
 
-                <p className="text-white/50 leading-relaxed">
+                <p className="text-sm md:text-base text-white/50 leading-relaxed">
 
                   A sanctuary designed around emotional recovery,
                   wellness, creativity, and meaningful human connection.
@@ -224,9 +228,6 @@ export default function Home() {
 
             </div>
 
-            {/* FLOATING LINE */}
-            <div className="absolute -left-10 top-20 w-[1px] h-40 bg-gradient-to-b from-[#b08d57] to-transparent animate-pulse" />
-
           </div>
 
         </div>
@@ -236,10 +237,9 @@ export default function Home() {
       {/* VISION */}
       <section
         id="vision"
-        className="max-w-7xl mx-auto px-6 py-28 grid lg:grid-cols-2 gap-20 items-center"
+        className="max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-28 grid lg:grid-cols-2 gap-16 md:gap-20 items-center"
       >
 
-        {/* LEFT */}
         <div className="space-y-8">
 
           <div>
@@ -248,7 +248,7 @@ export default function Home() {
               Why This Exists
             </p>
 
-            <h2 className="text-5xl md:text-7xl leading-[1] font-light tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl leading-[1] font-light tracking-tight">
 
               Modern cities
 
@@ -260,24 +260,22 @@ export default function Home() {
 
           </div>
 
-          <div className="space-y-6 text-white/55 text-lg leading-relaxed">
+          <div className="space-y-6 text-white/55 text-base md:text-lg leading-relaxed">
 
             <p>
-              Quiet Heures was created in response to the emotional exhaustion,
-              overstimulation, loneliness, and disconnection experienced in modern city life.
+              Quiet Heures was created in response to emotional exhaustion,
+              overstimulation, loneliness, and disconnection in modern city life.
             </p>
 
             <p>
               We are building a sanctuary for thinkers, creatives,
-              entrepreneurs, introverts, artists, wellness seekers,
-              and emotionally intelligent communities centered around calmness,
-              restoration, beauty, and genuine human connection.
+              entrepreneurs, introverts, artists, and wellness seekers centered
+              around calmness, restoration, beauty, and genuine connection.
             </p>
 
             <p>
               Quiet Heures combines the atmosphere of a luxury members club,
-              wellness retreat, boutique hotel, creative sanctuary,
-              and cultural community into one immersive urban experience.
+              wellness retreat, boutique hotel, and creative sanctuary into one immersive experience.
             </p>
 
           </div>
@@ -290,7 +288,7 @@ export default function Home() {
           <img
             src="/vision-interior.jpg"
             alt="Quiet Heures Interior"
-            className="w-full h-[720px] object-cover transition-transform duration-[4000ms] group-hover:scale-105"
+            className="w-full h-[420px] md:h-[720px] object-cover transition-transform duration-[4000ms] group-hover:scale-105"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent" />
@@ -305,15 +303,15 @@ export default function Home() {
         className="border-y border-white/10 bg-white/[0.02]"
       >
 
-        <div className="max-w-7xl mx-auto px-6 py-24">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-20 md:py-24">
 
-          <div className="max-w-4xl mb-20">
+          <div className="max-w-4xl mb-16 md:mb-20">
 
             <p className="uppercase tracking-[0.35em] text-sm text-[#b08d57] mb-5">
               Inside Quiet Heures
             </p>
 
-            <h2 className="text-5xl md:text-7xl leading-[1] font-light tracking-tight mb-8">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl leading-[1] font-light tracking-tight mb-8">
 
               Designed for every
 
@@ -323,7 +321,7 @@ export default function Home() {
 
             </h2>
 
-            <p className="text-lg text-white/50 leading-relaxed max-w-3xl">
+            <p className="text-base md:text-lg text-white/50 leading-relaxed max-w-3xl">
 
               Quiet Heures blends hospitality, wellness,
               culture, and emotional restoration into one immersive sanctuary.
@@ -333,7 +331,7 @@ export default function Home() {
           </div>
 
           {/* SERVICES */}
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
 
             {[
               {
@@ -357,7 +355,7 @@ export default function Home() {
               {
                 title: "Wellness & Fitness",
                 description:
-                  "Holistic wellness spaces including movement studios, recovery rooms, yoga, and mindfulness.",
+                  "Holistic wellness spaces including movement studios, yoga, mindfulness, and recovery rooms.",
               },
 
               {
@@ -369,32 +367,28 @@ export default function Home() {
               {
                 title: "Social Lounges",
                 description:
-                  "Curated spaces designed for conversation, networking, and meaningful connection.",
+                  "Curated spaces designed for meaningful conversation and connection.",
               },
             ].map((item, index) => (
 
               <div
                 key={index}
-                className="group border-b border-white/10 pb-8 hover:border-[#b08d57]/30 transition-all"
+                className="group border-b border-white/10 pb-8 hover:border-[#b08d57]/30 transition-all duration-500"
               >
 
                 <div className="flex items-start gap-5">
 
-                  <div className="pt-1">
-
-                    <p className="text-[#b08d57]/60 text-xs tracking-[0.25em]">
-                      0{index + 1}
-                    </p>
-
-                  </div>
+                  <p className="text-[#b08d57]/60 text-xs tracking-[0.25em] pt-2">
+                    0{index + 1}
+                  </p>
 
                   <div className="space-y-3">
 
-                    <h3 className="text-2xl md:text-3xl font-light group-hover:text-[#d7c1a0] transition-colors">
+                    <h3 className="text-xl md:text-3xl font-light group-hover:text-[#d7c1a0] transition-colors">
                       {item.title}
                     </h3>
 
-                    <p className="text-white/45 text-base leading-relaxed max-w-xl">
+                    <p className="text-white/45 leading-relaxed">
                       {item.description}
                     </p>
 
@@ -415,45 +409,44 @@ export default function Home() {
       {/* WAITLIST */}
       <section
         id="waitlist"
-        className="max-w-5xl mx-auto px-6 py-28"
+        className="max-w-5xl mx-auto px-4 md:px-6 py-20 md:py-28"
       >
 
-        <div className="border border-white/10 bg-gradient-to-br from-[#b08d57]/5 to-transparent p-14 rounded-xl backdrop-blur-xl text-center">
+        <div className="border border-white/10 bg-gradient-to-br from-[#b08d57]/5 to-transparent p-6 md:p-14 rounded-xl backdrop-blur-xl text-center">
 
           <p className="uppercase tracking-[0.35em] text-sm text-[#b08d57] mb-6">
             Founding Community
           </p>
 
-          <h2 className="text-5xl md:text-7xl leading-[1] font-light tracking-tight mb-8">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl leading-[1] font-light tracking-tight mb-8">
 
             Help shape the future
 
             <span className="block text-white/30">
-              of human-centered cities.
+              of cities.
             </span>
 
           </h2>
 
-          <p className="text-white/40 text-sm uppercase tracking-[0.25em] mb-8">
+          <p className="text-white/40 text-xs md:text-sm uppercase tracking-[0.2em] mb-8">
 
-            Founding waitlist members will receive first access
-            to memberships, launch events, experiences,
-            and future Quiet Heures locations.
+            Founding waitlist members receive first access to memberships,
+            launch events, and future Quiet Heures experiences.
 
           </p>
 
-          <p className="text-lg text-white/55 max-w-3xl mx-auto leading-relaxed mb-14">
+          <p className="text-base md:text-lg text-white/55 max-w-3xl mx-auto leading-relaxed mb-14">
 
             Joining the Quiet Heures founding waitlist gives you early access
-            to future memberships, launch announcements, private experiences,
-            and the first wave of community offerings when we officially open.
+            to memberships, launch announcements, private experiences,
+            and the first wave of community offerings.
 
             <br />
             <br />
 
-            Your support also helps demonstrate real demand to future investors,
-            wellness collaborators, and strategic partners helping us
-            build the future of emotionally intelligent urban living.
+            Your support also helps demonstrate real demand to investors,
+            collaborators, and strategic partners helping us build the future
+            of emotionally intelligent urban living.
 
           </p>
 
@@ -475,19 +468,19 @@ export default function Home() {
               name="email"
               required
               placeholder="Enter your email"
-              className="w-full bg-black/40 border border-white/10 px-7 py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-lg"
+              className="w-full bg-black/40 border border-white/10 px-5 md:px-7 py-4 md:py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-base md:text-lg transition-all duration-300"
             />
 
             <textarea
               name="message"
               rows={5}
               placeholder="Why would a space like Quiet Heures matter to you?"
-              className="w-full bg-black/40 border border-white/10 px-7 py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-lg resize-none"
+              className="w-full bg-black/40 border border-white/10 px-5 md:px-7 py-4 md:py-5 rounded-md outline-none focus:border-[#b08d57]/40 text-base md:text-lg resize-none transition-all duration-300"
             />
 
             <button
               type="submit"
-              className="w-full border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all px-8 py-5 rounded-md text-white uppercase tracking-[0.15em]"
+              className="w-full border border-[#b08d57]/30 bg-[#b08d57]/10 hover:bg-[#b08d57]/20 transition-all duration-500 px-8 py-4 md:py-5 rounded-md text-white uppercase tracking-[0.15em]"
             >
               Join Waitlist
             </button>
@@ -501,23 +494,23 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="border-t border-white/10 py-10">
 
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
 
           <div className="flex items-center gap-4">
 
             <img
               src="/logo.png"
               alt="Quiet Heures Logo"
-              className="w-16 h-16 object-contain"
+              className="w-14 h-14 object-contain"
             />
 
-            <p className="uppercase tracking-[0.3em] text-white/40 text-sm">
+            <p className="uppercase tracking-[0.25em] text-white/40 text-xs md:text-sm">
               Quiet Heures
             </p>
 
           </div>
 
-          <div className="flex items-center gap-6 text-white/40">
+          <div className="flex items-center gap-6 text-white/40 text-sm">
 
             <a
               href="https://www.instagram.com/quietheures/"
